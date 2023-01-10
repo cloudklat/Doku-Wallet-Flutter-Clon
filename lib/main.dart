@@ -47,19 +47,23 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+          bottom: PreferredSize(
+              preferredSize: const Size.fromHeight(40),
+              child: Container(
+                color: Colors.black12,
+                height: 4.0,
+              )),
           elevation: 0,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Image.asset(
                 "assets/icon/icon_launcher.png",
-                scale: 10,
-                fit: BoxFit.fitWidth,
+                scale: 4,
               ),
               Image.asset(
                 "assets/icon/icon_qris.png",
-                height: 30,
-                fit: BoxFit.fitWidth,
+                scale: 4,
               ),
               IconButton(
                   icon: const Icon(Icons.notifications_none_rounded),
@@ -84,6 +88,16 @@ class _MyAppState extends State<MyApp> {
               'Unlearn 🐛',
             ),
           ),
+          Center(
+            child: Text(
+              'Unlearn 🐛',
+            ),
+          ),
+          Center(
+            child: Text(
+              'Unlearn 🐛',
+            ),
+          ),
         ][selectedPageIndex],
         bottomNavigationBar: NavigationBar(
           selectedIndex: selectedPageIndex,
@@ -94,19 +108,44 @@ class _MyAppState extends State<MyApp> {
           },
           destinations: const <NavigationDestination>[
             NavigationDestination(
-              selectedIcon: Icon(Icons.home_rounded),
+              selectedIcon: Icon(
+                Icons.home_rounded,
+                color: Colors.redAccent,
+              ),
               icon: Icon(Icons.home_outlined),
-              label: 'Learn',
+              label: 'Beranda',
             ),
             NavigationDestination(
-              selectedIcon: Icon(Icons.percent_rounded),
+              selectedIcon: Icon(
+                Icons.percent_rounded,
+                color: Colors.redAccent,
+              ),
               icon: Icon(Icons.percent_rounded),
-              label: 'Relearn',
+              label: 'Promo',
             ),
             NavigationDestination(
-              selectedIcon: Icon(Icons.qr_code_scanner_rounded),
+              selectedIcon: Icon(
+                Icons.qr_code_scanner_rounded,
+                color: Colors.redAccent,
+              ),
               icon: Icon(Icons.qr_code_scanner_rounded),
-              label: 'Unlearn',
+              label: 'Bayar',
+            ),
+            NavigationDestination(
+              selectedIcon: Icon(
+                Icons.wallet_rounded,
+                color: Colors.redAccent,
+              ),
+              icon: Icon(Icons.wallet_outlined),
+              label: 'Wallet',
+            ),
+            NavigationDestination(
+              selectedIcon: Icon(
+                Icons.person_rounded,
+                color: Colors.redAccent,
+              ),
+              icon: Icon(Icons.person_outlined),
+              label: 'Akun',
             ),
           ],
         ),
