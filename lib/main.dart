@@ -100,6 +100,7 @@ class _MyAppState extends State<MyApp> {
           ),
         ][selectedPageIndex],
         bottomNavigationBar: NavigationBar(
+          height: 55,
           selectedIndex: selectedPageIndex,
           onDestinationSelected: (int index) {
             setState(() {
@@ -153,6 +154,131 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
+
+
+// class _MyAppState extends State<MyApp> {
+//   int selectedPageIndex = 0;
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Button Navigation Bar',
+//       theme: ThemeData(
+//         brightness: Brightness.light,
+//         appBarTheme: const AppBarTheme(
+//           backgroundColor: Colors.white70,
+//           foregroundColor: Colors.grey,
+//         ),
+//       ),
+//       debugShowCheckedModeBanner: false,
+//       home: Scaffold(
+//         appBar: AppBar(
+//           bottom: PreferredSize(
+//               preferredSize: const Size.fromHeight(40),
+//               child: Container(
+//                 color: Colors.black12,
+//                 height: 4.0,
+//               )),
+//           elevation: 0,
+//           title: Row(
+//             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//             children: <Widget>[
+//               Image.asset(
+//                 "assets/icon/icon_launcher.png",
+//                 scale: 4,
+//               ),
+//               Image.asset(
+//                 "assets/icon/icon_qris.png",
+//                 scale: 4,
+//               ),
+//               IconButton(
+//                   icon: const Icon(Icons.notifications_none_rounded),
+//                   iconSize: 30.0,
+//                   onPressed: () => {print("Click on settings button")}),
+//             ],
+//           ),
+//         ),
+//         body: const [
+//           Center(
+//             child: Text(
+//               'Learn 📗',
+//             ),
+//           ),
+//           Center(
+//             child: Text(
+//               'Relearn 👨‍🏫',
+//             ),
+//           ),
+//           Center(
+//             child: Text(
+//               'Unlearn 🐛',
+//             ),
+//           ),
+//           Center(
+//             child: Text(
+//               'Unlearn 🐛',
+//             ),
+//           ),
+//           Center(
+//             child: Text(
+//               'Unlearn 🐛',
+//             ),
+//           ),
+//         ][selectedPageIndex],
+//         bottomNavigationBar: NavigationBar(
+//           height: 55,
+//           selectedIndex: selectedPageIndex,
+//           onDestinationSelected: (int index) {
+//             setState(() {
+//               selectedPageIndex = index;
+//             });
+//           },
+//           destinations: const <NavigationDestination>[
+//             NavigationDestination(
+//               selectedIcon: Icon(
+//                 Icons.home_rounded,
+//                 color: Colors.redAccent,
+//               ),
+//               icon: Icon(Icons.home_outlined),
+//               label: 'Beranda',
+//             ),
+//             NavigationDestination(
+//               selectedIcon: Icon(
+//                 Icons.percent_rounded,
+//                 color: Colors.redAccent,
+//               ),
+//               icon: Icon(Icons.percent_rounded),
+//               label: 'Promo',
+//             ),
+//             NavigationDestination(
+//               selectedIcon: Icon(
+//                 Icons.qr_code_scanner_rounded,
+//                 color: Colors.redAccent,
+//               ),
+//               icon: Icon(Icons.qr_code_scanner_rounded),
+//               label: 'Bayar',
+//             ),
+//             NavigationDestination(
+//               selectedIcon: Icon(
+//                 Icons.wallet_rounded,
+//                 color: Colors.redAccent,
+//               ),
+//               icon: Icon(Icons.wallet_outlined),
+//               label: 'Wallet',
+//             ),
+//             NavigationDestination(
+//               selectedIcon: Icon(
+//                 Icons.person_rounded,
+//                 color: Colors.redAccent,
+//               ),
+//               icon: Icon(Icons.person_outlined),
+//               label: 'Akun',
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 // class MyApp extends StatelessWidget {
 //   const MyApp({Key? key}) : super(key: key);
